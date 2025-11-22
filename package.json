@@ -1,0 +1,32 @@
+{
+  "name": "@kalutskii/framework",
+  "version": "0.9.5",
+  "license": "MIT",
+  "author": "Ilya Kalutskii",
+  "description": "A lightweight TypeScript toolkit for building consistent and reusable service protocols.",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "start": "bun index.ts"
+  },
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+    "@types/bun": "latest",
+    "prettier": "^3.6.2"
+  },
+  "peerDependencies": {
+    "hono": "^4.10.6",
+    "ky": "^1.14.0",
+    "typescript": "^5"
+  }
+}
